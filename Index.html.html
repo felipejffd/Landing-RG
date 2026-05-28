@@ -1,0 +1,1037 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+<title>Construcciones RG · Tu apto acaba de llegar. Ahora viene lo importante.</title>
+<meta name="description" content="Remodelación y adecuación de apartamentos en obra gris. Presupuesto cerrado, entrega a tiempo, sin sorpresas. Bogotá, Colombia." />
+<meta name="theme-color" content="#133348" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<!-- ============================================================
+     TRACKING — Reemplaza los IDs (G-XXXX, FB pixel) antes de prod
+     ============================================================ -->
+<!-- Google Analytics 4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XXXXXXXXXX', { send_page_view: true });
+</script>
+
+<!-- Facebook Pixel
+     Activar reemplazando FB_PIXEL_ID y descomentando el bloque.
+     Mientras tanto, stub local para que fbq('track', ...) no rompa.
+-->
+<script>
+  window.fbq = window.fbq || function(){ (window.fbq.q = window.fbq.q || []).push(arguments); };
+  /*
+  !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+  n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+  document,'script','https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', 'FB_PIXEL_ID');
+  fbq('track', 'PageView');
+  */
+</script>
+
+<style>
+/* ============ TOKENS ============ */
+:root{
+  --orange:#E96A2E;
+  --orange-deep:#C75519;
+  --orange-soft:#FBE6D6;
+  --navy:#133348;
+  --navy-900:#0A1F2D;
+  --navy-700:#1E4863;
+  --concrete:#F4EFE8;
+  --sand:#E5D9C6;
+  --steel:#2A2F35;
+  --line:#E4DED4;
+  --ink:#0E1A22;
+  --paper:#FBF8F3;
+  --ok:#2D8C57;
+  --danger:#C0392B;
+
+  --display: "Archivo Black", system-ui, sans-serif;
+  --body: "Manrope", system-ui, sans-serif;
+
+  --container: 1160px;
+  --pad: clamp(20px, 5vw, 32px);
+}
+
+/* ============ BASE ============ */
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth}
+html,body{margin:0;padding:0;background:var(--paper);color:var(--ink);font-family:var(--body);-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+body{font-size:16px;line-height:1.55;overflow-x:hidden}
+img,video{max-width:100%;display:block;height:auto}
+button{font:inherit;cursor:pointer;border:0;background:none;color:inherit}
+a{color:inherit}
+::selection{background:var(--orange);color:#fff}
+
+.container{max-width:var(--container);margin:0 auto;padding:0 var(--pad)}
+
+/* ============ NAV ============ */
+.nav{
+  position:sticky;top:0;z-index:50;
+  background:rgba(251,248,243,.92);backdrop-filter:saturate(180%) blur(12px);
+  -webkit-backdrop-filter:saturate(180%) blur(12px);
+  border-bottom:1px solid var(--line);
+}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;height:64px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--navy)}
+.brand .mark{
+  width:38px;height:42px;flex-shrink:0;
+  background:url('assets/brand/marca-1.jpeg') no-repeat;
+  background-size:120px 120px;
+  background-position:-40px -25px;
+  mix-blend-mode:multiply;
+}
+.brand-text{font-family:var(--display);font-size:12px;line-height:1.05;letter-spacing:.02em}
+.brand-text small{display:block;font-family:var(--body);font-weight:600;font-size:9.5px;letter-spacing:.16em;color:#7A8893;margin-top:3px;text-transform:uppercase}
+.nav-cta{
+  display:inline-flex;align-items:center;gap:6px;
+  background:var(--navy);color:#fff;padding:9px 14px;border-radius:999px;
+  font-family:var(--body);font-weight:700;font-size:13px;text-decoration:none;
+  transition:transform .15s, background .15s;
+}
+.nav-cta:hover{background:var(--orange);transform:translateY(-1px)}
+.nav-cta svg{width:14px;height:14px}
+@media (max-width:480px){.nav-cta .lbl{display:none}.nav-cta{padding:9px 11px}}
+
+/* ============ HERO ============ */
+.hero{
+  position:relative;
+  background:linear-gradient(180deg,#0B2333 0%, var(--navy) 70%, #0F2C3F 100%);
+  color:#fff;overflow:hidden;
+  padding:clamp(48px,8vw,90px) 0 clamp(60px,9vw,110px);
+}
+.hero::before{
+  content:"";position:absolute;inset:0;
+  background:
+    radial-gradient(600px 280px at 85% 15%, rgba(233,106,46,.32), transparent 65%),
+    repeating-linear-gradient(135deg, rgba(255,255,255,.02) 0 2px, transparent 2px 26px);
+  pointer-events:none;
+}
+.hero-grid{position:relative;display:grid;grid-template-columns:1.15fr 1fr;gap:clamp(28px,5vw,56px);align-items:center}
+@media (max-width:880px){.hero-grid{grid-template-columns:1fr}}
+.eyebrow{
+  display:inline-flex;align-items:center;gap:10px;
+  font-weight:700;font-size:11px;letter-spacing:.22em;text-transform:uppercase;
+  color:var(--orange);margin-bottom:18px;
+}
+.eyebrow::before{content:"";width:24px;height:2px;background:var(--orange)}
+.hero h1{
+  font-family:var(--display);font-weight:900;
+  font-size:clamp(38px, 7vw, 76px);line-height:.95;letter-spacing:-.025em;
+  margin:0 0 18px;text-wrap:balance;
+}
+.hero h1 em{font-style:normal;color:var(--orange)}
+.hero .sub{
+  font-size:clamp(16px, 1.6vw, 19px);line-height:1.55;color:#C2D2DD;
+  max-width:52ch;margin:0 0 28px;
+}
+.cta-row{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:8px;
+  padding:16px 22px;border-radius:10px;
+  font-family:var(--body);font-weight:800;font-size:15px;letter-spacing:.01em;
+  text-decoration:none;transition:transform .15s, background .15s, box-shadow .15s;
+  white-space:nowrap;
+}
+.btn-primary{background:var(--orange);color:#fff;box-shadow:0 8px 20px -6px rgba(233,106,46,.55)}
+.btn-primary:hover{background:var(--orange-deep);transform:translateY(-1px);box-shadow:0 12px 24px -6px rgba(233,106,46,.6)}
+.btn-primary:active{transform:translateY(0)}
+.btn-ghost{color:#fff;border:1.5px solid rgba(255,255,255,.22);background:rgba(255,255,255,.04)}
+.btn-ghost:hover{background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.35)}
+.btn svg{width:18px;height:18px}
+
+.trust{
+  margin-top:32px;display:flex;flex-wrap:wrap;gap:24px 28px;
+  font-size:13px;color:#8BA3B2;font-weight:600;
+}
+.trust div{display:flex;align-items:center;gap:8px}
+.trust b{color:#fff;font-weight:800;font-family:var(--display);font-size:18px;margin-right:2px}
+
+/* Hero image: before/after slider */
+.ba{
+  position:relative;border-radius:18px;overflow:hidden;
+  box-shadow:0 30px 80px -20px rgba(0,0,0,.5);
+  aspect-ratio:4/5;
+  background:#0A1F2D;
+  border:1px solid rgba(255,255,255,.08);
+}
+.ba-frame{position:absolute;inset:0;overflow:hidden}
+.ba-frame.after{clip-path:inset(0 0 0 var(--split,55%))}
+.ph{
+  position:absolute;inset:0;
+  display:grid;place-items:center;text-align:center;color:#fff;
+  font-family:var(--display);font-size:13px;letter-spacing:.18em;text-transform:uppercase;
+}
+.ph.before{background:
+  linear-gradient(140deg, #4F4438 0%, #6B5B49 40%, #3A3328 100%);
+}
+.ph.before::before{
+  /* concrete texture vibe */
+  content:"";position:absolute;inset:0;
+  background:
+    radial-gradient(40% 70% at 70% 20%, rgba(255,255,255,.08), transparent 60%),
+    repeating-linear-gradient(0deg, transparent 0 60px, rgba(0,0,0,.18) 60px 62px),
+    repeating-linear-gradient(90deg, transparent 0 60px, rgba(0,0,0,.18) 60px 62px);
+  mix-blend-mode:multiply;opacity:.55;
+}
+.ph.after{background:
+  linear-gradient(160deg, #F4EFE8 0%, #E5D9C6 60%, #D3C2A5 100%);
+  color:var(--navy);
+}
+.ph.after::before{
+  content:"";position:absolute;inset:0;
+  background:
+    radial-gradient(80% 100% at 80% 100%, rgba(255,255,255,.55), transparent 60%),
+    linear-gradient(180deg, transparent 60%, rgba(19,51,72,.18));
+  mix-blend-mode:overlay;opacity:.9;
+}
+.ph .scene{
+  position:absolute;left:8%;right:8%;bottom:18%;top:18%;
+  border:1.5px solid currentColor;border-radius:6px;opacity:.35;
+}
+.ph .scene::after{
+  content:"";position:absolute;left:30%;right:30%;top:35%;bottom:0;border:1.5px solid currentColor;border-radius:4px 4px 0 0;
+}
+.ba-label{
+  position:absolute;top:14px;
+  font-family:var(--body);font-weight:800;font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;
+  background:rgba(0,0,0,.55);color:#fff;padding:5px 10px;border-radius:30px;
+}
+.ba-label.l{left:14px}
+.ba-label.r{right:14px;background:var(--orange)}
+.ba-handle{
+  position:absolute;top:0;bottom:0;width:3px;background:#fff;
+  left:calc(var(--split,55%));transform:translateX(-50%);
+  box-shadow:0 0 0 1px rgba(0,0,0,.2), 0 0 16px rgba(0,0,0,.4);
+  cursor:ew-resize;touch-action:none;
+}
+.ba-handle::before{
+  content:"";position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);
+  width:44px;height:44px;border-radius:50%;background:#fff;
+  box-shadow:0 4px 12px rgba(0,0,0,.3);
+}
+.ba-handle::after{
+  content:"⇆";position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);
+  font-family:var(--display);color:var(--navy);font-size:18px;
+}
+.ba-caption{
+  position:absolute;left:14px;right:14px;bottom:14px;z-index:2;
+  font-family:var(--body);font-size:11.5px;font-weight:700;color:#fff;
+  background:rgba(10,31,45,.78);padding:10px 12px;border-radius:8px;
+  backdrop-filter:blur(8px);
+  display:flex;justify-content:space-between;align-items:center;gap:10px;
+}
+.ba-caption small{font-weight:500;color:#B9CAD5;letter-spacing:.04em}
+.asset-tag{
+  position:absolute;top:14px;left:50%;transform:translateX(-50%);z-index:3;
+  font-family:var(--body);font-size:10px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;
+  background:rgba(255,255,255,.92);color:var(--navy);padding:5px 10px;border-radius:30px;
+  pointer-events:none;
+}
+
+/* ============ SECTIONS ============ */
+section{padding:clamp(64px, 9vw, 110px) 0;position:relative}
+section.alt{background:#fff}
+section.dark{background:var(--navy);color:#fff}
+.section-head{max-width:760px;margin:0 auto clamp(36px,6vw,56px);text-align:center}
+.section-head .eyebrow{justify-content:center}
+.section-head h2{
+  font-family:var(--display);font-weight:900;
+  font-size:clamp(32px,5vw,56px);line-height:1;letter-spacing:-.02em;
+  margin:0 0 14px;color:var(--navy);text-wrap:balance;
+}
+section.dark .section-head h2{color:#fff}
+.section-head p{font-size:clamp(15px,1.5vw,18px);color:#3A4B57;max-width:54ch;margin:0 auto;line-height:1.55}
+section.dark .section-head p{color:#B9CAD5}
+
+/* ============ PROBLEM/SOLUTION ============ */
+.psr{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+@media (max-width:880px){.psr{grid-template-columns:1fr}}
+.psr-card{
+  background:#fff;border:1px solid var(--line);border-radius:16px;padding:28px 24px;
+  position:relative;overflow:hidden;
+  transition:transform .2s, box-shadow .2s, border-color .2s;
+}
+.psr-card:hover{transform:translateY(-4px);box-shadow:0 20px 40px -20px rgba(19,51,72,.25);border-color:var(--orange)}
+.psr-card .step{
+  font-family:var(--display);font-size:11px;letter-spacing:.22em;text-transform:uppercase;
+  color:var(--orange-deep);margin-bottom:18px;display:flex;align-items:center;gap:10px;
+}
+.psr-card .step::before{
+  content:attr(data-n);width:32px;height:32px;border-radius:50%;background:var(--orange-soft);
+  display:grid;place-items:center;color:var(--orange-deep);font-family:var(--display);font-size:14px;letter-spacing:0;
+}
+.psr-card h3{
+  font-family:var(--display);font-size:22px;line-height:1.15;color:var(--navy);margin:0 0 12px;letter-spacing:-.005em;
+}
+.psr-card p{margin:0;color:#48566A;font-size:15px;line-height:1.6}
+.psr-card.solution{background:var(--navy);color:#fff;border-color:var(--navy)}
+.psr-card.solution h3{color:#fff}
+.psr-card.solution p{color:#B9CAD5}
+.psr-card.solution .step{color:var(--orange)}
+.psr-card.solution .step::before{background:var(--orange);color:#fff}
+.psr-card.result{background:var(--orange);color:#fff;border-color:var(--orange)}
+.psr-card.result h3{color:#fff}
+.psr-card.result p{color:#FFE3D2}
+.psr-card.result .step{color:#fff}
+.psr-card.result .step::before{background:#fff;color:var(--orange-deep)}
+.psr-arrow{
+  display:none;
+}
+@media (min-width:881px){
+  .psr-arrow{
+    position:absolute;top:50%;right:-20px;transform:translateY(-50%);
+    z-index:1;display:grid;place-items:center;
+    width:38px;height:38px;border-radius:50%;background:#fff;color:var(--navy);
+    box-shadow:0 4px 12px rgba(0,0,0,.1);font-family:var(--display);
+  }
+}
+
+/* ============ TESTIMONIAL VIDEO ============ */
+.video-wrap{
+  position:relative;max-width:900px;margin:0 auto;
+  aspect-ratio:16/9;border-radius:20px;overflow:hidden;
+  background:#0A1F2D;border:1px solid rgba(255,255,255,.1);
+  box-shadow:0 40px 100px -30px rgba(0,0,0,.6);
+}
+.video-poster{
+  position:absolute;inset:0;
+  background:
+    linear-gradient(180deg, transparent 30%, rgba(10,31,45,.85) 100%),
+    radial-gradient(circle at 35% 40%, #3D5266 0%, #1E3349 40%, #0A1F2D 100%);
+  display:grid;place-items:center;cursor:pointer;
+  transition:filter .2s;
+}
+.video-poster::before{
+  content:"";position:absolute;inset:0;
+  background:repeating-linear-gradient(135deg, rgba(255,255,255,.02) 0 2px, transparent 2px 24px);
+}
+.video-poster:hover{filter:brightness(1.1)}
+.video-poster .placeholder-figure{
+  position:absolute;top:50%;left:50%;transform:translate(-50%,-50%) scale(1.5);
+  width:140px;height:200px;border-radius:60px 60px 20px 20px;
+  background:linear-gradient(180deg,#5A6E7E 0%, #2C3E4B 100%);
+  opacity:.5;
+}
+.video-poster .placeholder-figure::before{
+  content:"";position:absolute;top:18px;left:50%;transform:translateX(-50%);
+  width:60px;height:60px;border-radius:50%;background:#7E8E9C;
+}
+.play-btn{
+  position:relative;width:88px;height:88px;border-radius:50%;
+  background:var(--orange);color:#fff;display:grid;place-items:center;
+  box-shadow:0 12px 32px rgba(233,106,46,.55);
+  z-index:2;transition:transform .2s, background .2s;
+}
+.play-btn:hover{transform:scale(1.06);background:var(--orange-deep)}
+.play-btn::before{
+  content:"";width:0;height:0;
+  border-style:solid;border-width:14px 0 14px 22px;border-color:transparent transparent transparent #fff;
+  margin-left:6px;
+}
+.video-meta{
+  position:absolute;left:24px;right:24px;bottom:22px;
+  display:flex;justify-content:space-between;align-items:end;gap:16px;color:#fff;
+  z-index:2;
+}
+.video-meta .who{font-family:var(--display);font-size:22px;line-height:1.1;letter-spacing:-.005em}
+.video-meta .who small{display:block;font-family:var(--body);font-weight:600;font-size:12px;letter-spacing:.06em;color:#B9CAD5;margin-top:6px;text-transform:uppercase}
+.video-meta .dur{
+  background:rgba(0,0,0,.55);padding:6px 12px;border-radius:30px;
+  font-family:var(--body);font-weight:700;font-size:12px;letter-spacing:.04em;
+  backdrop-filter:blur(8px);
+}
+.video-quote{
+  max-width:760px;margin:32px auto 0;text-align:center;
+  font-family:var(--display);font-size:clamp(20px,2.4vw,28px);line-height:1.25;color:var(--navy);
+  letter-spacing:-.005em;text-wrap:balance;
+}
+section.dark .video-quote{color:#fff}
+.video-quote::before{content:"" "";color:var(--orange)}
+
+/* ============ PROCESS ============ */
+.proc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;position:relative}
+@media (max-width:880px){.proc-grid{grid-template-columns:1fr}}
+.proc-card{
+  background:#fff;border:1px solid var(--line);border-radius:16px;padding:28px;
+  position:relative;display:flex;flex-direction:column;gap:14px;
+}
+.proc-num{
+  font-family:var(--display);font-size:64px;line-height:.9;color:var(--orange);letter-spacing:-.03em;
+}
+.proc-img{
+  aspect-ratio:16/10;border-radius:10px;overflow:hidden;position:relative;
+  background:linear-gradient(135deg,#4F4438,#3A3328);
+}
+.proc-img.demo{background:linear-gradient(135deg,#7A6A52,#3A3328)}
+.proc-img.build{background:linear-gradient(135deg,#D8AC83,#8C5A30)}
+.proc-img.deliver{background:linear-gradient(135deg,#F4EFE8,#E5D9C6)}
+.proc-img .tag{
+  position:absolute;left:12px;bottom:12px;
+  font-family:var(--body);font-size:10.5px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;
+  background:rgba(255,255,255,.92);color:var(--navy);padding:5px 10px;border-radius:30px;
+}
+.proc-img.deliver .tag{color:var(--navy)}
+.proc-img.demo .tag, .proc-img.build .tag{color:var(--navy)}
+.proc-img svg{position:absolute;inset:0;margin:auto;opacity:.55;width:60%;height:60%}
+.proc-card h3{
+  font-family:var(--display);font-size:22px;color:var(--navy);margin:0;line-height:1.1;letter-spacing:-.005em;
+}
+.proc-card .when{font-family:var(--body);font-size:11.5px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--orange-deep)}
+.proc-card p{margin:0;color:#48566A;font-size:14.5px;line-height:1.6}
+.proc-card ul{margin:6px 0 0;padding:0;list-style:none;display:flex;flex-direction:column;gap:6px}
+.proc-card ul li{font-size:13.5px;color:#48566A;padding-left:20px;position:relative;font-weight:500}
+.proc-card ul li::before{
+  content:"";position:absolute;left:0;top:7px;width:10px;height:6px;
+  border-left:2px solid var(--orange);border-bottom:2px solid var(--orange);
+  transform:rotate(-45deg);
+}
+
+/* ============ COMPARE ============ */
+.compare{display:grid;grid-template-columns:1fr 1fr;gap:14px;max-width:980px;margin:0 auto}
+@media (max-width:780px){.compare{grid-template-columns:1fr}}
+.compare-col{
+  border-radius:16px;padding:28px;display:flex;flex-direction:column;gap:14px;
+  border:1px solid var(--line);background:#fff;
+}
+.compare-col.bad{background:#FBF1F1;border-color:#F4D8D8}
+.compare-col.good{background:var(--navy);color:#fff;border-color:var(--navy);position:relative;overflow:hidden}
+.compare-col.good::before{
+  content:"";position:absolute;right:-60px;top:-60px;width:200px;height:200px;
+  background:radial-gradient(circle,var(--orange),transparent 60%);opacity:.3;
+}
+.compare-head{display:flex;align-items:center;gap:12px;position:relative}
+.compare-head .ico{
+  width:44px;height:44px;border-radius:50%;display:grid;place-items:center;
+  font-family:var(--display);font-size:22px;flex-shrink:0;
+}
+.compare-col.bad .ico{background:#fff;color:var(--danger)}
+.compare-col.good .ico{background:var(--orange);color:#fff}
+.compare-head h3{
+  font-family:var(--display);font-size:20px;line-height:1.05;margin:0;letter-spacing:-.005em;
+}
+.compare-col.bad .compare-head h3{color:var(--navy)}
+.compare-col.good .compare-head h3{color:#fff}
+.compare-head small{display:block;font-family:var(--body);font-size:10.5px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;margin-top:4px}
+.compare-col.bad small{color:var(--danger)}
+.compare-col.good small{color:var(--orange)}
+
+.compare-list{margin:8px 0 0;padding:0;list-style:none;display:flex;flex-direction:column;gap:14px;position:relative}
+.compare-list li{display:flex;gap:12px;align-items:start;font-size:15px;line-height:1.5;font-weight:500}
+.compare-list li .icon{
+  flex-shrink:0;width:22px;height:22px;border-radius:50%;display:grid;place-items:center;
+  font-family:var(--display);font-size:13px;margin-top:1px;
+}
+.compare-col.bad .icon{background:#F4D8D8;color:var(--danger)}
+.compare-col.good .icon{background:rgba(233,106,46,.18);color:var(--orange)}
+.compare-col.bad li{color:#5C3F3F}
+.compare-col.good li{color:#D6E1EA}
+
+/* ============ FINAL CTA / FORM ============ */
+.final{
+  background:linear-gradient(165deg, var(--navy) 0%, #0B2333 100%);
+  color:#fff;position:relative;overflow:hidden;
+}
+.final::before{
+  content:"";position:absolute;inset:0;
+  background:
+    radial-gradient(700px 350px at 90% 10%, rgba(233,106,46,.25), transparent 60%),
+    radial-gradient(500px 280px at 0% 100%, rgba(233,106,46,.15), transparent 60%);
+}
+.final-grid{position:relative;display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,5vw,56px);align-items:center;max-width:1100px;margin:0 auto}
+@media (max-width:880px){.final-grid{grid-template-columns:1fr;gap:32px}}
+.final h2{
+  font-family:var(--display);font-size:clamp(32px,5vw,56px);line-height:1;letter-spacing:-.02em;margin:0 0 18px;text-wrap:balance;
+}
+.final h2 em{font-style:normal;color:var(--orange)}
+.final .sub{color:#B9CAD5;font-size:17px;line-height:1.6;max-width:48ch;margin:0 0 24px}
+.final-list{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:10px;color:#D6E1EA;font-size:14.5px}
+.final-list li{display:flex;align-items:center;gap:10px;font-weight:500}
+.final-list li::before{
+  content:"";width:18px;height:18px;border-radius:50%;background:var(--orange);flex-shrink:0;
+  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><path d='M3.5 8.5l3 3 6-6' fill='none' stroke='white' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'/></svg>");
+  background-size:14px;background-position:center;background-repeat:no-repeat;
+}
+
+/* Form */
+.form-card{
+  background:#fff;color:var(--ink);border-radius:18px;padding:clamp(24px,3.5vw,36px);
+  box-shadow:0 40px 90px -30px rgba(0,0,0,.6);
+  border:1px solid rgba(255,255,255,.1);
+}
+.form-card .form-eyebrow{
+  font-family:var(--body);font-weight:700;font-size:11px;letter-spacing:.22em;text-transform:uppercase;
+  color:var(--orange-deep);margin:0 0 8px;
+}
+.form-card h3{font-family:var(--display);font-size:26px;line-height:1.1;color:var(--navy);margin:0 0 20px;letter-spacing:-.01em}
+.field{display:flex;flex-direction:column;gap:6px;margin-bottom:14px}
+.field label{font-family:var(--body);font-weight:700;font-size:12px;letter-spacing:.04em;color:var(--steel)}
+.field label em{font-style:normal;color:var(--orange);margin-left:2px}
+.field input, .field select{
+  font-family:var(--body);font-size:16px;font-weight:500;color:var(--ink);
+  padding:13px 14px;border:1.5px solid var(--line);border-radius:10px;background:#FCFAF6;
+  transition:border-color .15s, background .15s, box-shadow .15s;
+  -webkit-appearance:none;appearance:none;width:100%;
+}
+.field input:focus, .field select:focus{
+  outline:none;border-color:var(--orange);background:#fff;
+  box-shadow:0 0 0 4px var(--orange-soft);
+}
+.field select{
+  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 8'><path d='M1 1l5 5 5-5' fill='none' stroke='%23133348' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/></svg>");
+  background-repeat:no-repeat;background-position:right 14px center;background-size:12px;padding-right:38px;
+}
+.field .err{font-size:12px;color:var(--danger);font-weight:600;display:none}
+.field.invalid input, .field.invalid select{border-color:var(--danger);background:#FBF1F1}
+.field.invalid .err{display:block}
+.btn-submit{
+  width:100%;background:var(--orange);color:#fff;padding:17px;border-radius:10px;
+  font-family:var(--body);font-weight:800;font-size:15.5px;letter-spacing:.02em;
+  display:inline-flex;align-items:center;justify-content:center;gap:8px;
+  transition:background .15s, transform .15s, box-shadow .15s;
+  box-shadow:0 8px 20px -6px rgba(233,106,46,.55);
+}
+.btn-submit:hover{background:var(--orange-deep);transform:translateY(-1px)}
+.btn-submit:active{transform:translateY(0)}
+.btn-submit svg{width:16px;height:16px}
+.form-note{font-size:11.5px;color:#7A8893;margin:14px 0 0;text-align:center;line-height:1.5}
+
+.form-success{
+  display:none;text-align:center;padding:24px 12px;
+}
+.form-success.show{display:block}
+.form-success .ok{
+  width:72px;height:72px;border-radius:50%;background:var(--ok);color:#fff;
+  display:grid;place-items:center;margin:0 auto 18px;
+}
+.form-success .ok svg{width:34px;height:34px}
+.form-success h3{font-family:var(--display);font-size:24px;color:var(--navy);margin:0 0 8px}
+.form-success p{color:#48566A;margin:0;font-size:15px;max-width:36ch;margin:0 auto;line-height:1.5}
+
+/* ============ FOOTER ============ */
+footer{background:var(--navy);color:#7E96A4;padding:40px 0 32px;font-size:13px}
+.foot-inner{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:20px}
+.foot-brand{display:flex;align-items:center;gap:12px;color:#fff}
+.foot-brand .mark{
+  width:38px;height:42px;flex-shrink:0;
+  background:url('assets/brand/marca-7.jpeg') no-repeat;
+  background-size:120px 120px;
+  background-position:-40px -25px;
+}
+.foot-brand .brand-text{color:#fff}
+.foot-brand .brand-text small{color:#7E96A4}
+.foot-links{display:flex;gap:18px;font-weight:600}
+.foot-links a{text-decoration:none;color:#9CB3C2}
+.foot-links a:hover{color:#fff}
+.foot-copy{width:100%;text-align:center;color:#5D7280;font-size:11.5px;letter-spacing:.04em;border-top:1px solid rgba(255,255,255,.06);padding-top:18px;margin-top:18px}
+
+/* ============ FLOATING WA ============ */
+.wa-fab{
+  position:fixed;right:18px;bottom:18px;z-index:60;
+  width:56px;height:56px;border-radius:50%;background:#25D366;color:#fff;
+  display:grid;place-items:center;
+  box-shadow:0 12px 28px -6px rgba(37,211,102,.55);
+  transition:transform .15s;text-decoration:none;
+}
+.wa-fab:hover{transform:scale(1.06)}
+.wa-fab svg{width:28px;height:28px}
+
+/* ============ REVEAL ============ */
+/* Opt-in: solo aplica si JS marcó <html class="js">. Si JS falla, todo queda visible. */
+.js .reveal{transform:translateY(20px);transition:transform .6s ease}
+.js .reveal.in{transform:none}
+@media (prefers-reduced-motion: reduce){
+  .js .reveal{transform:none;transition:none}
+  html{scroll-behavior:auto}
+}
+
+</style>
+</head>
+<body>
+
+<!-- ========================= NAV ========================= -->
+<header class="nav">
+  <div class="container nav-inner">
+    <a href="#" class="brand" aria-label="Construcciones RG">
+      <div class="mark" aria-hidden="true"></div>
+      <div class="brand-text">CONSTRUCCIONES<br/>&amp; OBRAS CIVILES<small>RG SAS</small></div>
+    </a>
+    <a href="#form" class="nav-cta" data-track="nav_cta">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.93.38 1.83.74 2.69a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.39-1.31a2 2 0 0 1 2.11-.45c.86.36 1.76.61 2.69.74A2 2 0 0 1 22 16.92z"/></svg>
+      <span class="lbl">Solicitar consulta</span>
+    </a>
+  </div>
+</header>
+
+<!-- ========================= HERO ========================= -->
+<section class="hero" data-screen-label="Hero">
+  <div class="container hero-grid">
+    <div class="reveal">
+      <span class="eyebrow">Remodelación de Apartamentos · Bogotá</span>
+      <h1>Tu apto acaba<br/>de llegar.<br/><em>Ahora viene<br/>lo importante.</em></h1>
+      <p class="sub">Convertimos tu apartamento de obra gris en un hogar listo para habitar. Cronograma firmado, presupuesto cerrado y entrega cuando dijimos. Sin sorpresas.</p>
+      <div class="cta-row">
+        <a href="#form" class="btn btn-primary" data-track="hero_cta_primary">
+          Solicitar Consulta Gratis
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </a>
+        <a href="#proceso" class="btn btn-ghost" data-track="hero_cta_secondary">Cómo trabajamos</a>
+      </div>
+      <div class="trust">
+        <div><b>+80</b> aptos entregados</div>
+        <div><b>12</b> años en obra</div>
+        <div><b>4.9★</b> satisfacción</div>
+      </div>
+    </div>
+
+    <div class="ba reveal" id="ba" aria-label="Comparativa antes y después">
+      <div class="ba-frame before">
+        <div class="ph before"><div class="scene"></div><div style="position:relative;z-index:1">Apto en obra gris</div></div>
+        <span class="ba-label l">Antes</span>
+      </div>
+      <div class="ba-frame after">
+        <div class="ph after"><div class="scene"></div><div style="position:relative;z-index:1">Listo para habitar</div></div>
+        <span class="ba-label r">Después</span>
+      </div>
+      <span class="asset-tag">Reemplazar con foto real del cliente</span>
+      <div class="ba-handle" id="baHandle" role="slider" tabindex="0" aria-label="Deslizar antes / después" aria-valuemin="0" aria-valuemax="100" aria-valuenow="55"></div>
+      <div class="ba-caption">
+        <span>Proyecto Cedritos · 62 m² · 11 semanas</span>
+        <small>Caso real</small>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========================= PROBLEM / SOLUTION / RESULT ========================= -->
+<section class="alt" id="psr" data-screen-label="Problema · Solución · Resultado">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">El recorrido</span>
+      <h2>De recibir las llaves a mostrarlo con orgullo.</h2>
+      <p>La mayoría llega aquí sin saber por dónde empezar. Te explicamos en tres pasos cómo lo resolvemos.</p>
+    </div>
+    <div class="psr">
+      <div class="psr-card problem reveal">
+        <div class="step" data-n="!">El Problema</div>
+        <h3>Te entregaron en obra gris.</h3>
+        <p>Pisos sin enchape, baños sin acabados, cocina sin muebles. Cinco maestros distintos, tres cotizaciones contradictorias, y el riesgo de que el presupuesto se duplique a mitad de obra.</p>
+        <div class="psr-arrow" aria-hidden="true">›</div>
+      </div>
+      <div class="psr-card solution reveal">
+        <div class="step" data-n="✓">La Solución</div>
+        <h3>Un solo equipo. Un solo contrato.</h3>
+        <p>Visitamos tu apto, levantamos planos, te entregamos propuesta con materiales, plazos y precio cerrado. Coordinamos enchapadores, electricistas, pintores y carpintería bajo nuestra dirección.</p>
+        <div class="psr-arrow" aria-hidden="true">›</div>
+      </div>
+      <div class="psr-card result reveal">
+        <div class="step" data-n="★">El Resultado</div>
+        <h3>Te entregamos las llaves de nuevo.</h3>
+        <p>En 8 a 14 semanas según el tamaño del apto, recibes tu hogar limpio, conectado y funcional. Con garantía escrita de 12 meses sobre obra blanca y acabados.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========================= TESTIMONIAL VIDEO ========================= -->
+<section class="dark" id="testimonio" data-screen-label="Testimonio video">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Caso real</span>
+      <h2>Mariana lo cuenta mejor que nosotros.</h2>
+      <p>Recibió su apartamento en obra gris en Cedritos. En 11 semanas se mudó. Esto es lo que nos dijo.</p>
+    </div>
+    <div class="video-wrap reveal">
+      <div class="video-poster" id="videoPoster" role="button" tabindex="0" aria-label="Reproducir testimonio">
+        <div class="placeholder-figure"></div>
+        <button class="play-btn" aria-label="Reproducir video"></button>
+        <span class="asset-tag" style="background:rgba(255,255,255,.18);color:#fff">Reemplazar con video del cliente · 45–60s</span>
+        <div class="video-meta">
+          <div class="who">Mariana T.<small>Apto Cedritos · 62 m²</small></div>
+          <div class="dur">0:52</div>
+        </div>
+      </div>
+    </div>
+    <p class="video-quote reveal">"Lo que más valoro es que cuando pregunté cuánto cuesta y cuánto tarda, me dieron un número y una fecha. Y los dos se cumplieron."</p>
+  </div>
+</section>
+
+<!-- ========================= PROCESS ========================= -->
+<section class="alt" id="proceso" data-screen-label="Proceso 3 pasos">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Cómo trabajamos</span>
+      <h2>Tres etapas. Cero zonas grises.</h2>
+      <p>El mismo proceso para todos los proyectos, sin importar el tamaño. Así sabes exactamente qué pasa cada semana.</p>
+    </div>
+    <div class="proc-grid">
+      <div class="proc-card reveal">
+        <div class="proc-img demo">
+          <svg viewBox="0 0 64 64" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 50V28l12-10 12 10v22"/><path d="M28 50V36h8v14"/><circle cx="44" cy="20" r="3"/><path d="M14 50h36"/></svg>
+          <span class="tag">01 · Visita</span>
+        </div>
+        <div class="when">Semana 0 · Gratis</div>
+        <h3>Consulta y propuesta</h3>
+        <p>Vamos a tu apto. Medimos, conversamos materiales, fotografiamos. A las 72 horas te enviamos propuesta detallada con precio cerrado.</p>
+        <ul>
+          <li>Visita técnica sin costo</li>
+          <li>Propuesta a medida en 72 horas</li>
+          <li>Materiales con muestras físicas</li>
+        </ul>
+      </div>
+      <div class="proc-card reveal">
+        <div class="proc-img build">
+          <svg viewBox="0 0 64 64" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 50h40"/><path d="M16 50V30l16-10 16 10v20"/><path d="M22 50V40h20v10"/><path d="M30 22l-6 8M40 18l-6 12"/><circle cx="50" cy="14" r="3"/></svg>
+          <span class="tag">02 · Obra</span>
+        </div>
+        <div class="when">Semanas 1 – 12 · Avance semanal</div>
+        <h3>Ejecución dirigida</h3>
+        <p>Demolición, instalaciones, enchapes, carpintería y acabados. Un solo director de obra responde por todo. Reporte fotográfico cada viernes.</p>
+        <ul>
+          <li>Cronograma firmado por hitos</li>
+          <li>Reporte fotográfico semanal</li>
+          <li>Cambios siempre aprobados antes</li>
+        </ul>
+      </div>
+      <div class="proc-card reveal">
+        <div class="proc-img deliver">
+          <svg viewBox="0 0 64 64" fill="none" stroke="%23133348" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 52V28l18-12 18 12v24"/><path d="M26 52V36h12v16"/><path d="M22 30h20"/><circle cx="44" cy="22" r="4"/><path d="M42 22l1.5 1.5L47 20"/></svg>
+          <span class="tag">03 · Entrega</span>
+        </div>
+        <div class="when">Semana final · Listo para vivir</div>
+        <h3>Entrega y garantía</h3>
+        <p>Limpieza de obra incluida. Recorrido final contigo. Acta firmada, manuales de los electrodomésticos, y garantía escrita de 12 meses.</p>
+        <ul>
+          <li>Limpieza profesional incluida</li>
+          <li>Garantía escrita de 12 meses</li>
+          <li>Soporte post-entrega 30 días</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========================= COMPARE ========================= -->
+<section data-screen-label="Sin nosotros vs Con nosotros">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">La diferencia</span>
+      <h2>Sin nosotros vs Con nosotros.</h2>
+      <p>Para que sea más fácil tomar la decisión, así se ve cada camino.</p>
+    </div>
+
+    <div class="compare">
+      <div class="compare-col bad reveal">
+        <div class="compare-head">
+          <div class="ico" aria-hidden="true">✕</div>
+          <div>
+            <small>Por tu cuenta</small>
+            <h3>Sin nosotros</h3>
+          </div>
+        </div>
+        <ul class="compare-list">
+          <li><span class="icon">✕</span><span>Coordinar 5–8 maestros distintos cada uno con su agenda y precio.</span></li>
+          <li><span class="icon">✕</span><span>Cotizaciones verbales que cambian a mitad de obra.</span></li>
+          <li><span class="icon">✕</span><span>Fines de semana en ferreterías escogiendo cosas que no sabes si combinan.</span></li>
+          <li><span class="icon">✕</span><span>Promesas de tiempos que se duplican sin explicación.</span></li>
+          <li><span class="icon">✕</span><span>Cuando algo falla, nadie responde porque "eso lo hizo el otro".</span></li>
+          <li><span class="icon">✕</span><span>Sin garantía. Si en 3 meses se cae el enchape, vuelves a empezar.</span></li>
+        </ul>
+      </div>
+      <div class="compare-col good reveal">
+        <div class="compare-head">
+          <div class="ico" aria-hidden="true">✓</div>
+          <div>
+            <small>Con nosotros</small>
+            <h3>Con RG</h3>
+          </div>
+        </div>
+        <ul class="compare-list">
+          <li><span class="icon">✓</span><span>Un solo equipo dirigido, un solo punto de contacto, una sola factura.</span></li>
+          <li><span class="icon">✓</span><span>Presupuesto cerrado por escrito antes de mover un ladrillo.</span></li>
+          <li><span class="icon">✓</span><span>Asesoría de materiales con muestras físicas que llegan a tu apto.</span></li>
+          <li><span class="icon">✓</span><span>Cronograma firmado por hitos con reporte fotográfico cada viernes.</span></li>
+          <li><span class="icon">✓</span><span>Director de obra dedicado: responsable de principio a fin.</span></li>
+          <li><span class="icon">✓</span><span>Garantía escrita de 12 meses sobre obra blanca y acabados.</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========================= FINAL CTA / FORM ========================= -->
+<section class="final" id="form" data-screen-label="CTA final + Form">
+  <div class="container final-grid">
+    <div class="reveal">
+      <span class="eyebrow" style="color:var(--orange)">Empezamos cuando quieras</span>
+      <h2>Cuéntanos de tu apto. Te respondemos hoy mismo.</h2>
+      <p class="sub">Visita técnica sin costo en Bogotá y municipios cercanos. Propuesta completa en 72 horas. Sin compromiso de contratar.</p>
+      <ul class="final-list">
+        <li>Visita técnica gratuita</li>
+        <li>Propuesta detallada en 72 horas</li>
+        <li>Presupuesto cerrado por escrito</li>
+        <li>Garantía de 12 meses</li>
+      </ul>
+    </div>
+
+    <div class="form-card reveal">
+      <form id="leadForm" novalidate>
+        <p class="form-eyebrow">Solicitar consulta gratis</p>
+        <h3>4 campos. 30 segundos.</h3>
+
+        <div class="field" data-field="nombre">
+          <label for="nombre">Nombre completo <em>*</em></label>
+          <input id="nombre" name="nombre" type="text" autocomplete="name" required placeholder="Ej. Alejandra Rey"/>
+          <span class="err">Cuéntanos cómo te llamas.</span>
+        </div>
+
+        <div class="field" data-field="telefono">
+          <label for="telefono">Teléfono / WhatsApp <em>*</em></label>
+          <input id="telefono" name="telefono" type="tel" inputmode="tel" autocomplete="tel" required placeholder="300 000 0000" pattern="[0-9 +()-]{7,}"/>
+          <span class="err">Necesitamos un número para escribirte.</span>
+        </div>
+
+        <div class="field" data-field="ciudad">
+          <label for="ciudad">Ciudad <em>*</em></label>
+          <select id="ciudad" name="ciudad" required>
+            <option value="">Selecciona tu ciudad</option>
+            <option>Bogotá</option>
+            <option>Chía</option>
+            <option>Cajicá</option>
+            <option>Cota</option>
+            <option>La Calera</option>
+            <option>Sopó</option>
+            <option>Mosquera / Madrid / Funza</option>
+            <option>Otra (Colombia)</option>
+          </select>
+          <span class="err">Indica dónde está el apartamento.</span>
+        </div>
+
+        <div class="field" data-field="proyecto">
+          <label for="proyecto">Tipo de proyecto <em>*</em></label>
+          <select id="proyecto" name="proyecto" required>
+            <option value="">¿Qué necesitas hacer?</option>
+            <option>Acabados de apto en obra gris</option>
+            <option>Remodelación completa</option>
+            <option>Solo cocina</option>
+            <option>Solo baños</option>
+            <option>Pisos y pintura</option>
+            <option>Aún no sé / quiero asesoría</option>
+          </select>
+          <span class="err">Cuéntanos qué tipo de obra es.</span>
+        </div>
+
+        <button type="submit" class="btn-submit" data-track="form_submit">
+          Quiero mi consulta gratis
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </button>
+        <p class="form-note">Al enviar aceptas que te contactemos por teléfono o WhatsApp. No compartimos tu información.</p>
+      </form>
+
+      <div class="form-success" id="formSuccess" role="status" aria-live="polite">
+        <div class="ok">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg>
+        </div>
+        <h3>¡Recibido!</h3>
+        <p>Te llamamos hoy mismo. Mientras tanto, si quieres, escríbenos por WhatsApp al <strong>300 361 0745</strong>.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========================= FOOTER ========================= -->
+<footer data-screen-label="Footer">
+  <div class="container foot-inner">
+    <div class="foot-brand">
+      <div class="mark" aria-hidden="true"></div>
+      <div class="brand-text" style="color:#fff;font-family:var(--display);font-size:11px;line-height:1.1">CONSTRUCCIONES<br/>&amp; OBRAS CIVILES<small style="display:block;font-family:var(--body);font-weight:600;font-size:9.5px;letter-spacing:.16em;color:#7E96A4;margin-top:3px;text-transform:uppercase">RG SAS</small></div>
+    </div>
+    <div class="foot-links">
+      <a href="tel:+573003610745">300 361 0745</a>
+      <a href="https://wa.me/573003610745" data-track="foot_wa">WhatsApp</a>
+      <a href="mailto:contacto@construccionesrg.co">Email</a>
+    </div>
+    <div class="foot-copy">
+      © 2026 Construcciones y Obras Civiles RG SAS · NIT 901.XXX.XXX-X · Bogotá, Colombia · <a href="#" style="color:inherit">Política de privacidad</a>
+    </div>
+  </div>
+</footer>
+
+<a href="https://wa.me/573003610745?text=Hola%20RG%2C%20quiero%20una%20consulta%20gratis%20para%20mi%20apto" class="wa-fab" aria-label="WhatsApp" data-track="wa_fab" target="_blank" rel="noopener">
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9s-.5-.1-.7.1c-.2.3-.7.9-.9 1.1-.2.2-.3.2-.6.1s-1.2-.4-2.3-1.4c-.8-.7-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5s-.7-1.6-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.7.4-.3.3-1 1-1 2.4s1 2.8 1.2 3c.2.2 2 3 4.8 4.2.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.7-.7 1.9-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3z"/><path d="M19.1 4.9C17.2 3 14.7 2 12 2 6.5 2 2 6.5 2 12c0 1.8.5 3.5 1.3 5L2 22l5.2-1.3c1.4.8 3.1 1.2 4.8 1.2 5.5 0 10-4.5 10-10 0-2.7-1-5.2-2.9-7.1zM12 20c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-3-.2-.3C4.4 14.9 4 13.5 4 12c0-4.4 3.6-8 8-8 2.1 0 4.2.8 5.7 2.3C19.2 7.8 20 9.9 20 12c0 4.4-3.6 8-8 8z"/></svg>
+</a>
+
+<script>
+/* Marcar JS activo ANTES de pintar el primer frame, para que .reveal pueda ocultarse. */
+document.documentElement.classList.add('js');
+
+/* ============ Reveal on scroll ============ */
+(() => {
+  const els = document.querySelectorAll('.reveal');
+  // 1) Sweep inicial: cualquier .reveal ya visible en viewport se muestra ya (hero, etc.)
+  const showIfInView = (el) => {
+    const r = el.getBoundingClientRect();
+    if (r.top < window.innerHeight && r.bottom > 0) el.classList.add('in');
+  };
+  els.forEach(showIfInView);
+
+  // 2) Fallback: si IntersectionObserver no existe, marcamos todo visible.
+  if (!('IntersectionObserver' in window)) {
+    els.forEach(el => el.classList.add('in'));
+    return;
+  }
+
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('in');
+        io.unobserve(e.target);
+      }
+    });
+  }, { rootMargin: '0px 0px -8% 0px', threshold: .08 });
+  els.forEach(el => { if (!el.classList.contains('in')) io.observe(el); });
+
+  // 3) Cinturón y tirantes: si por alguna razón algo quedó oculto después de 1.5s, lo mostramos.
+  setTimeout(() => { els.forEach(el => el.classList.add('in')); }, 1500);
+})();
+
+/* ============ Before/After slider ============ */
+(() => {
+  const wrap = document.getElementById('ba');
+  const handle = document.getElementById('baHandle');
+  if (!wrap || !handle) return;
+  let drag = false;
+  const set = (pct) => {
+    pct = Math.max(2, Math.min(98, pct));
+    wrap.style.setProperty('--split', pct + '%');
+    handle.setAttribute('aria-valuenow', Math.round(pct));
+  };
+  const move = (clientX) => {
+    const r = wrap.getBoundingClientRect();
+    set(((clientX - r.left) / r.width) * 100);
+  };
+  const start = (e) => { drag = true; e.preventDefault(); };
+  const end = () => drag = false;
+  const onMove = (e) => {
+    if (!drag) return;
+    const x = e.touches ? e.touches[0].clientX : e.clientX;
+    move(x);
+  };
+  handle.addEventListener('mousedown', start);
+  handle.addEventListener('touchstart', start, { passive:false });
+  window.addEventListener('mouseup', end);
+  window.addEventListener('touchend', end);
+  window.addEventListener('mousemove', onMove);
+  window.addEventListener('touchmove', onMove, { passive:false });
+  // Also allow click-on-track to jump
+  wrap.addEventListener('click', (e) => {
+    if (e.target.closest('.ba-handle')) return;
+    move(e.clientX);
+  });
+  // Keyboard
+  handle.addEventListener('keydown', (e) => {
+    const cur = parseFloat(getComputedStyle(wrap).getPropertyValue('--split')) || 55;
+    if (e.key === 'ArrowLeft') set(cur - 4);
+    if (e.key === 'ArrowRight') set(cur + 4);
+  });
+})();
+
+/* ============ Video poster click ============ */
+(() => {
+  const p = document.getElementById('videoPoster');
+  if (!p) return;
+  p.addEventListener('click', () => {
+    if (window.gtag) gtag('event', 'video_play_intent', { event_category: 'engagement' });
+    if (window.fbq) fbq('track', 'ViewContent', { content_name: 'testimonial_video' });
+    // When the real video is provided, swap this with <video> embed or YouTube iframe.
+    alert('Aquí se mostrará el video testimonial del cliente (45–60s). Pendiente reemplazar por el archivo final.');
+  });
+  p.addEventListener('keypress', (e) => { if (e.key === 'Enter' || e.key === ' ') p.click(); });
+})();
+
+/* ============ Form validation + tracking ============ */
+(() => {
+  const form = document.getElementById('leadForm');
+  const success = document.getElementById('formSuccess');
+  if (!form) return;
+
+  const fields = form.querySelectorAll('.field');
+
+  const validateField = (f) => {
+    const input = f.querySelector('input, select');
+    let ok = input.checkValidity() && input.value.trim() !== '';
+    if (input.type === 'tel') {
+      const digits = input.value.replace(/\D/g,'');
+      ok = ok && digits.length >= 7;
+    }
+    f.classList.toggle('invalid', !ok);
+    return ok;
+  };
+
+  fields.forEach(f => {
+    const input = f.querySelector('input, select');
+    input.addEventListener('blur', () => { if (input.value) validateField(f); });
+    input.addEventListener('input', () => { if (f.classList.contains('invalid')) validateField(f); });
+  });
+
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    let allOk = true;
+    fields.forEach(f => { if (!validateField(f)) allOk = false; });
+    if (!allOk) {
+      const firstBad = form.querySelector('.field.invalid input, .field.invalid select');
+      if (firstBad) firstBad.focus();
+      return;
+    }
+
+    const data = Object.fromEntries(new FormData(form).entries());
+
+    // -------- TRACKING --------
+    if (window.gtag) {
+      gtag('event', 'generate_lead', {
+        event_category: 'form',
+        event_label: data.proyecto,
+        value: 1,
+        city: data.ciudad
+      });
+      // GA4 conversion (configure as conversion in GA console)
+      gtag('event', 'conversion', { send_to: 'G-XXXXXXXXXX/lead' });
+    }
+    if (window.fbq) {
+      fbq('track', 'Lead', { content_category: data.proyecto, content_name: 'consulta_gratis' });
+    }
+
+    // -------- BACKEND HOOK --------
+    // Replace this with your endpoint (Formspree, Zapier webhook, custom API, etc.)
+    // fetch('https://example.com/leads', { method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify(data) });
+    console.log('[Lead]', data);
+
+    form.style.display = 'none';
+    success.classList.add('show');
+    success.scrollIntoView({ behavior:'smooth', block:'center' });
+  });
+
+  // Track CTA clicks generically
+  document.querySelectorAll('[data-track]').forEach(el => {
+    el.addEventListener('click', () => {
+      const name = el.getAttribute('data-track');
+      if (window.gtag) gtag('event', 'cta_click', { event_category: 'engagement', event_label: name });
+      if (window.fbq) fbq('trackCustom', 'CTAClick', { name });
+    });
+  });
+})();
+</script>
+</body>
+</html>
